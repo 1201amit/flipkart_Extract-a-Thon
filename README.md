@@ -11,7 +11,7 @@ Our overall objective is to minimize the domain gap in order to learn task specf
 2. Flipkart complete data. It is unsupervised data provided by flipkart. We used it as a target domain.
 
 ### Model: 
-We used BERT-large-uncased model pretrained on SQUAD dataset. 
+We used [BERT-large-uncased model](https://huggingface.co/bert-large-uncased) pretrained on SQUAD dataset. 
 ### Training procedure:  
 To solve the unsupervised attribute value selection problem, we partially trained a BERT model on source domain to learn task specfic features and later finetuned it on unsupervised target domain to learn domain generic features. This finetuning consists of 3 self-supervised stages. 
 
