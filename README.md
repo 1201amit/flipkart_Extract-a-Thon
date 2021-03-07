@@ -7,7 +7,7 @@
 ### Model: 
 We used BERT-large-uncased model pretrained on SQUAD dataset. 
 ### Training procedure:  
-To solve the unsupervised attribute value selection problem, we trained a BERT model on source domain to learn task specfic features and later finetuned it on unsupervised target domain to learn domain generic features. This finetuning consists of 3 self-supervised stages. We used BERT pretrained weights as a initilizer. 
+To solve the unsupervised attribute value selection problem, we trained a BERT model on **source domain** to learn task specfic features and later finetuned it on unsupervised target domain to learn domain generic features. This finetuning consists of 3 self-supervised stages. 
 
 ## How to run 
 1. Clone the repo from [git-repo](https://github.com/1201amit/flipkart_Extract-a-Thon/new/master). 
