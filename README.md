@@ -1,11 +1,15 @@
 # flipkart_Extract-a-Thon
 
+## Problem setting
+Our task is to extract attribute-value pair from given product description. We approached this problem as a Question-Answer task where the set of attributes are assumed to be Questions on given product description.
+
 ## Approach
+Our overall objective is to minimize the domain gap in order to learn task specfic and domain generic features. 
+
 ### Dataset used: 
 1. [Ali-express data](https://raw.githubusercontent.com/lanmanok/ACL19_Scaling_Up_Open_Tagging/master/publish_data.txt). It is sports-based supervised data. We used it as a source domain. 
 2. Flipkart complete data. It is unsupervised data provided by flipkart. We used it as a target domain.
 
-Our overall objective is to minimize the domain gap in order to learn task specfic and domain generic features. 
 ### Model: 
 We used BERT-large-uncased model pretrained on SQUAD dataset. 
 ### Training procedure:  
