@@ -4,16 +4,12 @@
 Our task is to extract attribute-value pair from given product description. We approached this problem as a Question-Answer task where the set of attributes are assumed to be Questions on given product description.
 
 ## Approach
-Our overall objective is to minimize the domain gap in order to learn task specfic and domain generic features. 
-
-### Dataset used: 
-1. [Ali-express data](https://raw.githubusercontent.com/lanmanok/ACL19_Scaling_Up_Open_Tagging/master/publish_data.txt). It is sports-based supervised data. We used it as a source domain. 
-2. Flipkart complete data. It is unsupervised data provided by flipkart. We used it as a target domain.
+We solved this problem as a transfer learning task to get task agnostic features and finetuned last layers of model to learn task specfic patterns. 
 
 ### Model: 
-We used [BERT-large-uncased model](https://huggingface.co/bert-large-uncased) pretrained on SQUAD dataset. 
+We followed [BERT-large-uncased model](https://huggingface.co/bert-large-uncased) architecture. 
 ### Training procedure:  
-To solve the unsupervised attribute value selection problem, we partially trained a BERT model on source domain to learn task specfic features and later finetuned it on unsupervised target domain to learn domain generic features. This finetuning consists of 3 self-supervised stages. 
+To solve the unsupervised attribute value selection problem, we trained BERT in self-supervised fashion for 3 stages. We used adaptive threshold based algorithm to get pseudo labels.
 
 ## How to evaluate 
 1. Clone the repo from [git-repo](https://github.com/1201amit/flipkart_Extract-a-Thon/new/master). 
